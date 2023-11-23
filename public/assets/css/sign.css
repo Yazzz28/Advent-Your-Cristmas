@@ -1,6 +1,7 @@
 body {
     background-color: rgb(145, 12, 12);
     height: 100vh;
+    text-align: center;
 }
 
 .line {
@@ -21,15 +22,12 @@ body {
     background-color: #6FD7A3;
     color: white;
     border: 1px solid #C4E2FF;
+    border-radius: 10px 10px 10px 0;
+    margin-top: 2rem;
 }
 
-.uk-input {
-    width: 100%;
-}
-
-.uk-inline {
-    justify-content: center;
-    width: 700px;
+.form-input {
+    margin: 1rem;
 }
 
 h1 {
