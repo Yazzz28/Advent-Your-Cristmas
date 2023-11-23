@@ -1,8 +1,12 @@
 {% extends 'layout.html.twig' %}
 {% block title %}
 	{{ parent() }}- Nouveau mot de passe
-{%
-endblock %}
+{% endblock %}
+
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/loginStyle.css">
+{% endblock %}
+
 {% block content %}
 	<div class="uk-container uk-position-center uk-flex-column">
 		<h1>Réinitialisation du mot de passe</h1>
