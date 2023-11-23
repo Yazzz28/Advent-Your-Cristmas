@@ -6,4 +6,5 @@ body {
 
 @import url(homeStyle.css);
 @import url(loginStyle.css);
-
+@import url('navbar.css');
+@import url('home_style.css');
