@@ -1,6 +1,5 @@
 {% extends 'layout.html.twig' %}
-{% block title %} {{ parent() }}-Connexion {% endblock %}
-
+{% block title %} {{ parent() }}- Connection {% endblock %}
 
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/loginStyle.css">
@@ -54,10 +53,12 @@
         <button class="uk-button uk-button-default" href="/" type="submit">Se connecter</button>
     </form>
     <div class="line"></div>
+    <div class= "other-link">
     <h4>
         Vous n'avez pas de compte ? merci de vous
-        <a href="signin">Enregistrez</a>
+        <a href="signin">enregistrer.</a>
     </h4>
-    <h4>Mot de passe oublié ? <a href="forgot">Nouveau mot de passe </a></h4>
+    <h4>Mot de passe oublié ? <a href="forgot">Nouveau mot de passe. </a></h4>
+    </div>
 </div>
 {% endblock %}
