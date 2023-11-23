@@ -24,6 +24,7 @@ class SecurityController extends AbstractController
                 $errors['password'] = 'Veuillez renseigner votre password';
             }
 
+
             if (!$errors) {
                 $securityManager = new SecurityManager();
                 $user = $securityManager->userLogin($_POST);
@@ -78,17 +79,24 @@ class SecurityController extends AbstractController
                 return;
             }
 
+            if ($errors) {
+                return json_encode(['errorSignin' => $errors]);
+            }
+
             if (!$errors) {
                 $securityManager = new SecurityManager();
                 $user = $securityManager->userSignin($_POST);
                 if ($user) {
                     $_SESSION['islogin'] = true;
                     $_SESSION['email'] = $user['email'];
+                    return json_encode(['status_signin' => 'success', 'message' => 'Inscription réussie']);
+                    //header('Location:/login');
+                } else {
+                    return json_encode(['status_signin' => 'errors', 'message' => 'Erreur enregistrement']);
                 }
-                header('Location:/login');
             }
         }
-        return $this->twig->render('Security/sign_in.html.twig', ['errors' => $errors]);
+        //return $this->twig->render('Security/sign_in.html.twig', ['errors' => $errors]);
     }
 
     public function resetPassword()
@@ -98,6 +106,7 @@ class SecurityController extends AbstractController
             if ($_POST['email'] == '') {
                 $errors['email'] = 'Veuillez renseigner votre email';
             }
+
 
             if (!$errors) {
                 $securityManager = new SecurityManager();
