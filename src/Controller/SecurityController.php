@@ -100,7 +100,7 @@ class SecurityController extends AbstractController
             }
 
             if ($errors) {
-                return json_encode(['errosForgot' => $errors]);
+                return json_encode(['errorsForgot' => $errors]);
             }
 
             if (!$errors) {
@@ -109,10 +109,10 @@ class SecurityController extends AbstractController
                 if ($user) {
                     $_SESSION['islogin'] = true;
                     $_SESSION['email'] = $user['email'];
-                    return json_encode((['status_forgot' => 'success', 'message' => 'Votre mot de passe a bien été modifié']));
+                    return json_encode((['status_forgot' => 'success', 'message_success' => 'Votre mot de passe a bien été modifié']));
                     //header('Location:/');
                 } else {
-                    return json_encode(['status_forgot' => 'errors', 'message' => 'Erreur de saisie']);
+                    return json_encode(['status_forgot' => 'errorsForgot', 'message_error' => 'Erreur de saisie']);
                 }
             }
         }

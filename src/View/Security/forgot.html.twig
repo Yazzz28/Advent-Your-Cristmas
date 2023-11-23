@@ -9,13 +9,7 @@
 					<div class="uk-margin">
 						<div class="uk-inline">
 							<span class="uk-form-icon" uk-icon="icon: user"></span>
-							<input class="uk-input" type="text" aria-label="Not clickable icon" name="email" placeholder="Votre email"/>
-							{% if errors.email is defined %}
-								<div class="uk-alert-danger" uk-alert>
-									<a class="uk-alert-close" uk-close></a>
-									<p>{{ errors.email }}</p>
-								</div>
-							{% endif %}
+							<input class="uk-input" type="text" aria-label="Not clickable icon" name="email" placeholder="Votre email" id="errorEmailForgot"/>
 						</div>
 					</div>
 
@@ -23,12 +17,6 @@
 						<div class="uk-inline">
 							<span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
 							<input class="uk-input" type="password" aria-label="Not clickable icon" name="password" placeholder="Mot de passe"/>
-							{% if errors.password is defined %}
-								<div class="uk-alert-danger" uk-alert>
-									<a class="uk-alert-close" uk-close></a>
-									<p>{{ errors.password }}</p>
-								</div>
-							{% endif %}
 						</div>
 					</div>
 					<div class="uk-flex div-btn">
