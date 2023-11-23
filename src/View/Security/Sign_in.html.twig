@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block stylesheet %}
-		<link rel="stylesheet" href="/assets/css/loginStyle.css"> 
+	<link rel="stylesheet" href="/assets/css/loginStyle.css">
 {% endblock %}
 
 {% block content %}
@@ -23,13 +23,6 @@
 				<div class="uk-alert-danger" uk-alert>
 					<a class="uk-alert-close" uk-close></a>
 					<p>{{ errors.firstname }}</p>
-				</div>
-			{% endif %}
-			<input class="form-input uk-input" name="lastname" type="text" placeholder="Nom de famille">
-			{% if errors.lastname is defined %}
-				<div class="uk-alert-danger" uk-alert>
-					<a class="uk-alert-close" uk-close></a>
-					<p>{{ errors.lastname }}</p>
 				</div>
 			{% endif %}
 			<input class="form-input uk-input" name="email" type="mail" placeholder="Email">
