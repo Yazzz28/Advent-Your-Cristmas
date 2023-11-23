@@ -1,65 +1,60 @@
 {% extends 'layout.html.twig' %}
-{% block title %} {{ parent() }}-Connexion {% endblock %}
+{% block title %}
+	{{ parent() }}-Connexion
+{% endblock %}
 
 
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/loginStyle.css">
+	<link rel="stylesheet" href="/assets/css/loginStyle.css">
 {% endblock %}
 
 {% block content %}
-<div class="uk-container uk-position-center">
-    <h1>Merci de vous connecter</h1>
-    <div class="line"></div>
-    <form method="POST">
-        <div class="uk-margin">
-            <div class="uk-inline">
-                <span class="uk-form-icon" uk-icon="icon: user"></span>
-                <input
-                    class="uk-input"
-                    type="text"
-                    aria-label="Not clickable icon"
-                    name="email"
-                    placeholder="Votre email"
-                />
-                {% if errors.email is defined %}
-                <div class="uk-alert-danger" uk-alert>
-                    <a class="uk-alert-close" uk-close></a>
-                    <p>{{ errors.email }}</p>
-                </div>
-                {% endif %}
-            </div>
-        </div>
+	<div class="uk-container uk-position-center">
+		<div id="modal-center-1" class="uk-flex-top pop-up modal-center-1" uk-modal>
+			<div class="uk-modal-dialog container  uk-modal-body uk-margin-auto-vertical div_login">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<h1>Merci de vous connecter</h1>
+				<div class="line"></div>
+				<form method="POST">
+					<div class="uk-margin">
+						<div class="uk-inline">
+							<span class="uk-form-icon" uk-icon="icon: user"></span>
+							<input class="uk-input" type="text" aria-label="Not clickable icon" name="email" placeholder="Votre email"/>
+							{% if errors.email is defined %}
+								<div class="uk-alert-danger" uk-alert>
+									<a class="uk-alert-close" uk-close></a>
+									<p>{{ errors.email }}</p>
+								</div>
+							{% endif %}
+						</div>
+					</div>
 
-        <div class="uk-margin">
-            <div class="uk-inline">
-                <span
-                    class="uk-form-icon uk-form-icon-flip"
-                    uk-icon="icon: lock"
-                ></span>
-                <input
-                    class="uk-input"
-                    type="password"
-                    aria-label="Not clickable icon"
-                    name="password"
-                    placeholder="Mot de passe"
-                />
-                {% if errors.password is defined %}
-                <div class="uk-alert-danger" uk-alert>
-                    <a class="uk-alert-close" uk-close></a>
-                    <p>{{ errors.password }}</p>
-                </div>
-                {% endif %}
-            </div>
+					<div class="uk-margin">
+						<div class="uk-inline">
+							<span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+							<input class="uk-input" type="password" aria-label="Not clickable icon" name="password" placeholder="Mot de passe"/>
+							{% if errors.password is defined %}
+								<div class="uk-alert-danger" uk-alert>
+									<a class="uk-alert-close" uk-close></a>
+									<p>{{ errors.password }}</p>
+								</div>
+							{% endif %}
+						</div>
+					</div>
+					<button class="uk-button uk-button-default" href="/" type="submit">Se connecter</button>
+				</form>
+				<div class="line"></div>
+				<div class="other-link">
+					<h4>
+						Vous n'avez pas de compte ? merci de vous
+						<a href="signin">enregistrer.</a>
+					</h4>
+					<h4>Mot de passe oublié ?
+						<a href="forgot">Nouveau mot de passe.
+						</a>
+					</h4>
+				</div>
+			</div>
         </div>
-        <button class="uk-button uk-button-default" href="/" type="submit">Se connecter</button>
-    </form>
-    <div class="line"></div>
-    <div class= "other-link">
-    <h4>
-        Vous n'avez pas de compte ? merci de vous
-        <a href="signin">enregistrer.</a>
-    </h4>
-    <h4>Mot de passe oublié ? <a href="forgot">Nouveau mot de passe. </a></h4>
     </div>
-</div>
-{% endblock %}
+		{% endblock %}
