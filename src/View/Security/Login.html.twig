@@ -1,0 +1,58 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ parent() }}-Connection {% endblock %}
+
+{% block content %}
+<div class="uk-container uk-position-center">
+    <h1>Merci de vous connecter</h1>
+    <div class="line"></div>
+    <form method="POST">
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input
+                    class="uk-input"
+                    type="text"
+                    aria-label="Not clickable icon"
+                    name="email"
+                    placeholder="Votre email"
+                />
+                {% if errors.email is defined %}
+                <div class="uk-alert-danger" uk-alert>
+                    <a class="uk-alert-close" uk-close></a>
+                    <p>{{ errors.email }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span
+                    class="uk-form-icon uk-form-icon-flip"
+                    uk-icon="icon: lock"
+                ></span>
+                <input
+                    class="uk-input"
+                    type="password"
+                    aria-label="Not clickable icon"
+                    name="password"
+                    placeholder="Mot de passe"
+                />
+                {% if errors.password is defined %}
+                <div class="uk-alert-danger" uk-alert>
+                    <a class="uk-alert-close" uk-close></a>
+                    <p>{{ errors.password }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <button class="uk-button uk-button-default" href="/" type="submit">Se connecter</button>
+    </form>
+    <div class="line"></div>
+    <h4>
+        Vous n'avez pas de compte ? merci de vous
+        <a href="signin">Enregistrez</a>
+    </h4>
+    <h4>Mot de passe oublié ? <a href="forgot">Nouveau mot de passe </a></h4>
+</div>
+{% endblock %}
