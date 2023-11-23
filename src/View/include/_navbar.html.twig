@@ -3,9 +3,15 @@
 		<li>
 			<a class="a-nav" href="/">Accueil</a>
 		</li>
-		<li>
-			<a class="a-nav" href="login">Login</a>
-		</li>
+		{% if session.islogin == true %}
+			<li>
+				<a class="a-nav" href="logout">Logout</a>
+			</li>
+		{% else %}
+			<li>
+				<a class="a-nav" href="login">Login</a>
+			</li>
+		{% endif %}
 	</ul>
 	<div class="div-line">
 		<div class='line-nav-left'></div>
