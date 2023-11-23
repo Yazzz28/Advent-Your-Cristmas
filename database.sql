@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `user` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `firstname` VARCHAR(50) NOT NULL,
-  `password` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `email` VARCHAR(50) NOT NULL
 );
 
@@ -69,6 +69,7 @@ CREATE TABLE contenu (
   cadeau_id INT NOT NULL,
   FOREIGN KEY (cadeau_id) REFERENCES cadeau(id) ON DELETE CASCADE,
   image_id INT NOT NULL,
+  FOREIGN KEY (image_id) REFERENCES image(id) ON DELETE CASCADE
   FOREIGN KEY (image_id) REFERENCES image(id) ON DELETE CASCADE,
   film_id INT NOT NULL,
   FOREIGN KEY (film_id) REFERENCES film(id) ON DELETE CASCADE
