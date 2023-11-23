@@ -6,28 +6,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="/assets/images/favicon.png">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css"/>
-		<link rel="stylesheet" href="/assets/css/style.css"> 			
+		<link rel="stylesheet" href="/assets/css/style.css">
 
 		<title>
-			{% block title %}
-			
-			{% endblock %}
-		</title>		
+			{% block title %}{% endblock %}
+		</title>
 
 		{% block stylesheet %}
-		<link rel="stylesheet" href="/assets/css/navbar.css"> 
+			<link rel="stylesheet" href="/assets/css/navbar.css">
 		{% endblock %}
-		</head>
+	</head>
 
-		<body>
+	<body>
 
-			{% include "/include/_navbar.html.twig" %}
+		{% include "/include/_navbar.html.twig" %}
+		{% include "/Security/forgot.html.twig" %}
 
-			{% block content %}{% endblock %}
+		{% block content %}{% endblock %}
 
-			{% block javascript %}{% endblock %}
-			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
-			<script src="/assets/JS/script.js"></script>
-		</body>
-	</html>
+		{% block javascript %}{% endblock %}
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
+		<script src="/assets/JS/script.js"></script>
+	</body>
+</html>
