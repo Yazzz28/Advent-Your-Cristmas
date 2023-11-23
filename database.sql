@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `user` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `firstname` VARCHAR(50) NOT NULL,
-  `password` VARCHAR(255) NOT NULL,
-  `email` VARCHAR(50) NOT NULL
+  `email` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE blague (
