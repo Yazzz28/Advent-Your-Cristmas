@@ -1,15 +1,15 @@
 {% extends 'layout.html.twig' %}
 {% block title %}
-	{{parent()}}-Inscription
+	{{ parent() }} -Inscription
 {% endblock %}
 
 {% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/loginStyle.css">
+	<link rel="stylesheet" href="/assets/css/sign.css">
 {% endblock %}
 
 {% block content %}
 	<div class="uk-container uk-position-center">
-		<h1 class="uk-heading-bullet">Inscription</h1>
+		<h1>Inscription</h1>
 		<div class="line"></div>
 		<form method="post">
 			{% if errors.compte is defined %}
@@ -18,28 +18,28 @@
 					<p>{{ errors.compte }}</p>
 				</div>
 			{% endif %}
-			<input class="uk-input" name="firstname" type="text" placeholder="Prénom">
+			<input class="form-input uk-input" name="firstname" type="text" placeholder="Prénom">
 			{% if errors.firstname is defined %}
 				<div class="uk-alert-danger" uk-alert>
 					<a class="uk-alert-close" uk-close></a>
 					<p>{{ errors.firstname }}</p>
 				</div>
 			{% endif %}
-			<input class="uk-input" name="lastname" type="text" placeholder="Nom de famille">
+			<input class="form-input uk-input" name="lastname" type="text" placeholder="Nom de famille">
 			{% if errors.lastname is defined %}
 				<div class="uk-alert-danger" uk-alert>
 					<a class="uk-alert-close" uk-close></a>
 					<p>{{ errors.lastname }}</p>
 				</div>
 			{% endif %}
-			<input class="uk-input" name="email" type="mail" placeholder="Email">
+			<input class="form-input uk-input" name="email" type="mail" placeholder="Email">
 			{% if errors.email is defined %}
 				<div class="uk-alert-danger" uk-alert>
 					<a class="uk-alert-close" uk-close></a>
 					<p>{{ errors.email }}</p>
 				</div>
 			{% endif %}
-			<input class="uk-input" name="password" type="password" placeholder="Mot de passe">
+			<input class="form-input uk-input" name="password" type="password" placeholder="Mot de passe">
 			{% if errors.password is defined %}
 				<div class="uk-alert-danger" uk-alert>
 					<a class="uk-alert-close" uk-close></a>
