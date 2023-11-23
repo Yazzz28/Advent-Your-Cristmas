@@ -43,11 +43,7 @@ CREATE TABLE recette (
 
 CREATE TABLE cadeau (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-<<<<<<< HEAD
-  idée VARCHAR(50) NOT NULL
-=======
   idea VARCHAR(50) NOT NULL
->>>>>>> 94cb40b87ee02c7517e5d8d9c30f28f9cba5ba17
 );
 
 CREATE TABLE image (
@@ -55,14 +51,11 @@ CREATE TABLE image (
   photo VARCHAR(255) NOT NULL
 );
 
-<<<<<<< HEAD
-=======
 CREATE TABLE film (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   titre_film VARCHAR(255) NOT NULL
 );
 
->>>>>>> 94cb40b87ee02c7517e5d8d9c30f28f9cba5ba17
 CREATE TABLE contenu (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   jour date,
@@ -75,11 +68,7 @@ CREATE TABLE contenu (
   cadeau_id INT NOT NULL,
   FOREIGN KEY (cadeau_id) REFERENCES cadeau(id) ON DELETE CASCADE,
   image_id INT NOT NULL,
-<<<<<<< HEAD
-  FOREIGN KEY (image_id) REFERENCES image(id) ON DELETE CASCADE
-=======
   FOREIGN KEY (image_id) REFERENCES image(id) ON DELETE CASCADE,
   film_id INT NOT NULL,
   FOREIGN KEY (film_id) REFERENCES film(id) ON DELETE CASCADE
->>>>>>> 94cb40b87ee02c7517e5d8d9c30f28f9cba5ba17
 );
