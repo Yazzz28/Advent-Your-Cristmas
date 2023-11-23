@@ -22,7 +22,9 @@
 
 			{% include "/include/_navbar.html.twig" %}
 
-			{% block content %}{% endblock %}
+			{% block content %}
+			 {% include 'Login.html.twig' %}
+			 {% endblock %}
 
 			{% block javascript %}{% endblock %}
 			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
