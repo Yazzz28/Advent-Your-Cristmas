@@ -9,6 +9,10 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        return $this->twig->render('Home/index.html.twig');
+
+        $images = ["https://www.gignaclanerthe.fr/wp-content/uploads/2022/11/noeumll.jpg",
+        "https://storage.googleapis.com/pod_public/1300/123044.jpg"];
+
+        return $this->twig->render('Home/index.html.twig', ["images" => $images]);
     }
 }
