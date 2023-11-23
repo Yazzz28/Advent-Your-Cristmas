@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+<<<<<<< HEAD
 	{% block stylesheet %}
 		<link rel="stylesheet" href="/assets/css/home_style.css">
 	{% endblock %}
@@ -23,5 +24,29 @@
 			</article>
 		{% endfor %}
 	</section>
+=======
+{% block stylesheet %}		
+  <link rel="stylesheet" href="/assets/css/home_style.css">
+{% endblock %}
+<h1 class="uk-text-center">Calendrier de l'avent</h1>
+<section>
+{% for i in 0..23 %}
+<article class="container">
+  <div class="cube" id="{{i}}">
+    <div class="face front">
+      <p>{{i+1}}</p>
+    </div>
+    <div class="face back">
+    <img src="{{images[i]}}" >
+    </div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+  </article>
+{% endfor %}
+</section>
+>>>>>>> 30ebcec6ae66d3305f60b5bacaf26c88388bd23b
 
 {% endblock %}
