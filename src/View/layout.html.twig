@@ -9,17 +9,17 @@
 		<link rel="stylesheet" href="assets/style.css"/>
 
 		<title>
-			{% block title %}{% endblock %}
+			{% block title %} Calendrier de l'avant {% endblock %}
 		</title>
+		<link rel="stylesheet" href="navbar.css">
 		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
 		</head>
 
 		<body>
 
 			{% include "/include/_navbar.html.twig" %}
-			
-			{% block content %}
-			{% endblock %}
+
+			{% block content %}{% endblock %}
 
 			{% block javascript %}{% endblock %}
 			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>

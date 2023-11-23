@@ -19,81 +19,38 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `simple-mvc`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `item`
---
-
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `item`
---
-
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
-
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-CREATE hackathon1;
+CREATE DATABASE hackathon1;
 
 USE hackathon1;
 
-CREATE TABLE 'user' (
-  'id'INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  'prénom' VARCHAR(50) NOT NULL,
+CREATE TABLE user (
+  'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  'prenom' VARCHAR(50) NOT NULL,
   'mail' VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE 'blague' (
+CREATE TABLE blague (
   'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   'histoire' VARCHAR(200) NOT NULL
 );
 
-CREATE TABLE 'recette' (
+CREATE TABLE recette (
   'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   'titre' VARCHAR(50) NOT NULL,
   'description' VARCHAR(3000) NOT NULL
 );
 
-CREATE TABLE 'cadeau' (
+CREATE TABLE cadeau (
   'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   'idée' VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE 'image' (
+CREATE TABLE image (
   'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   'photo' VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE 'contenu' (
+CREATE TABLE contenu (
   'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   'jour' date,
   'user_id' INT NOT NULL, 
