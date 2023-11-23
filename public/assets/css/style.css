@@ -1,10 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
     font-family: "Roboto", sans-serif;
 }
-
-@import url(homeStyle.css);
-@import url(loginStyle.css);
-@import url('navbar.css');
-@import url('home_style.css');
