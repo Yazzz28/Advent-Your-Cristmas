@@ -109,7 +109,8 @@ class SecurityController extends AbstractController
                 if ($user) {
                     $_SESSION['islogin'] = true;
                     $_SESSION['email'] = $user['email'];
-                    return json_encode((['status_forgot' => 'success', 'message_success' => 'Votre mot de passe a bien été modifié']));
+                    return json_encode((['status_forgot' => 'success', 'message_success' =>
+                    'Votre mot de passe a bien été modifié']));
                     //header('Location:/');
                 } else {
                     return json_encode(['status_forgot' => 'errorsForgot', 'message_error' => 'Erreur de saisie']);
