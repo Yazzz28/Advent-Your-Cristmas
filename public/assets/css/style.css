@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import './navbar.css';
-@import './sign.css';
 @import './home_style.css';
 @import './loginStyle.css';
+@import url('modal.css');
 
 
 body {

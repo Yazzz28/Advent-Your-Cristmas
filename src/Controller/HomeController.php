@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\HomeManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -14,5 +16,21 @@ class HomeController extends AbstractController
         "https://storage.googleapis.com/pod_public/1300/123044.jpg"];
 
         return $this->twig->render('Home/index.html.twig', ["images" => $images]);
+    }
+
+    public function showModal()
+    {
+        $homeManager = new HomeManager();
+        $contents = $homeManager->selectAll();
+
+        return $this->twig->render('Home/index.html.twig', ['contents' => $contents]);
+    }
+
+    public function selectDate($id)
+    {
+        $homeManager = new HomeManager();
+        $dateDay = $homeManager->selectDateById($id);
+
+        return $this->twig->render('Home/index.html.twig', ['dateDay' => $dateDay]);
     }
 }

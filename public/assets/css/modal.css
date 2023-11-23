@@ -1,0 +1,20 @@
+div.modal-calendar {
+    padding: 2rem;
+    background-color: rgba(253, 71, 85, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: solid #6FD7A3 5px;
+}
+
+.titre-calendrier {
+    color: white;
+    font-family: 'roboto',sans-serif;
+    font-size: 2rem;
+}
+
+.calendar-content {
+    color: white;
+    font-family: 'roboto',sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
