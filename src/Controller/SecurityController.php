@@ -30,10 +30,7 @@ class SecurityController extends AbstractController
 
                 if ($user && password_verify($_POST['password'], $user['password'])) {
                     $_SESSION['islogin'] = true;
-                    $_SESSION['isadmin'] = $user['isadmin'];
-                    $_SESSION['user_id'] = $user['id'];
                     $_SESSION['email'] = $user['email'];
-                    $_SESSION['profession'] = $user['profession'];
                     header('Location:/');
                 } else {
                     $errors['login'] = 'Email ou mot de passe incorrect';
@@ -47,10 +44,6 @@ class SecurityController extends AbstractController
     {
         unset($_SESSION['islogin']);
         unset($_SESSION['email']);
-        unset($_SESSION['profession']);
-        if (isset($_SESSION['isadmin'])) {
-            unset($_SESSION['isadmin']);
-        }
         header('Location:/');
     }
 
@@ -65,7 +58,7 @@ class SecurityController extends AbstractController
             if ($securityManager->emailExist($_POST['email'])) {
                 $errors['compte'] = 'Un compte existe deja avec cet email';
             }
-            $requireds = ["firstname", "lastname", "email", "password", "adresse", "tel"];
+            $requireds = ["firstname", "email", "password"];
             foreach ($requireds as $required) {
                 if ($_POST[$required] == '') {
                     $errors[$required] = 'Ce champ est obligatoire';
@@ -90,7 +83,6 @@ class SecurityController extends AbstractController
                 $user = $securityManager->userSignin($_POST);
                 if ($user) {
                     $_SESSION['islogin'] = true;
-                    $_SESSION['isadmin'] = $user['isadmin'];
                     $_SESSION['email'] = $user['email'];
                 }
                 header('Location:/login');
@@ -112,7 +104,6 @@ class SecurityController extends AbstractController
                 $user = $securityManager->userResetPassword($_POST);
                 if ($user) {
                     $_SESSION['islogin'] = true;
-                    $_SESSION['isadmin'] = $user['isadmin'];
                     $_SESSION['email'] = $user['email'];
                     header('Location:/');
                 } else {
