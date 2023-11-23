@@ -11,7 +11,10 @@
 		<title>
 			{% block title %}{% endblock %}
 		</title>
-		<link rel="stylesheet" href="/assets/css/style.css"> {% block stylesheet %}{% endblock %}
+		<link rel="stylesheet" href="/assets/css/style.css"> 
+		{% block stylesheet %}
+		<link rel="stylesheet" href="/assets/css/loginStyle.css"> 
+		{% endblock %}
 		</head>
 
 		<body>

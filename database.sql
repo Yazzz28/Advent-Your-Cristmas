@@ -18,49 +18,57 @@ SET time_zone = "+00:00";
 
 --
 -- Base de données :  `simple-mvc`
+-- 
+
+-- --------------------------------------------------------
+
 --
-CREATE DATABASE hackathon1;
 
-USE hackathon1;
-
-CREATE TABLE 'user' (
-  'id'INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  'prénom' VARCHAR(50) NOT NULL,
-  'mail' VARCHAR(50) NOT NULL
+CREATE TABLE `user` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `prenom` VARCHAR(50) NOT NULL,
+  `mail` VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE 'blague' (
-  'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  'histoire' VARCHAR(200) NOT NULL
+CREATE TABLE blague (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  histoire VARCHAR(200) NOT NULL
 );
 
-CREATE TABLE 'recette' (
-  'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  'titre' VARCHAR(50) NOT NULL,
-  'description' VARCHAR(3000) NOT NULL
+CREATE TABLE recette (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  titre VARCHAR(50) NOT NULL,
+  description VARCHAR(3000) NOT NULL
 );
 
-CREATE TABLE 'cadeau' (
-  'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  'idée' VARCHAR(50) NOT NULL
+CREATE TABLE cadeau (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  idea VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE 'image' (
-  'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  'photo' VARCHAR(255) NOT NULL
+CREATE TABLE image (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  photo VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE 'contenu' (
-  'id' INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  'jour' date,
-  'user_id' INT NOT NULL, 
+CREATE TABLE film (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  titre_film VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE contenu (
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  jour date,
+  user_id INT NOT NULL, 
   FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE,
-  'blague_id' INT NOT NULL,
+  blague_id INT NOT NULL,
   FOREIGN KEY (blague_id) REFERENCES blague(id) ON DELETE CASCADE,
-  'recette_id' INT NOT NULL,
+  recette_id INT NOT NULL,
   FOREIGN KEY (recette_id) REFERENCES recette(id) ON DELETE CASCADE,
-  'cadeau_id' INT NOT NULL,
+  cadeau_id INT NOT NULL,
   FOREIGN KEY (cadeau_id) REFERENCES cadeau(id) ON DELETE CASCADE,
-  'image_id' INT NOT NULL,
-  FOREIGN KEY (image_id) REFERENCES image(id) ON DELETE CASCADE
+  image_id INT NOT NULL,
+  FOREIGN KEY (image_id) REFERENCES image(id) ON DELETE CASCADE,
+  film_id INT NOT NULL,
+  FOREIGN KEY (film_id) REFERENCES film(id) ON DELETE CASCADE
 );
