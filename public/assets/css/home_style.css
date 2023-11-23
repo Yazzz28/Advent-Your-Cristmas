@@ -1,7 +1,7 @@
 section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: #db2929;
+    background-color: #FD4755;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -39,7 +39,7 @@ section {
     width: 200px;
     height: 200px;
     transform: translateZ(116px);
-    background: rgb(49, 87, 28);
+    background: #6FD7A3;
     transition: all 0.4s ease-in-out;
     border-radius: 0 4rem 0 0;
 }
