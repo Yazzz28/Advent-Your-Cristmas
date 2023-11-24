@@ -101,26 +101,18 @@ class SecurityController extends AbstractController
     {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if ($_POST['email'] == '') {
-                $errors['email'] = 'Veuillez renseigner votre email';
+            if ($_POST['emailF'] == '') {
+                $errors['emailF'] = 'Veuillez renseigner votre email';
             }
 
             if ($errors) {
                 return json_encode(['errorsForgot' => $errors]);
             }
 
-
-
                 $securityManager = new SecurityManager();
-                $user = $securityManager->userResetPassword($_POST);
-            if ($user) {
-                return json_encode(['status_forgot' => 'errorsForgot', 'message_error' => 'Erreur de saisie']);
-                //header('Location:/');
-            } else {
-                return json_encode((['status_forgot' => 'success', 'message_success' =>
-                'Votre mot de passe a bien été modifié']));
-            }
+                $securityManager->userResetPassword($_POST);
+                return json_encode(['status_forgot' => 'success',
+                'message_success' => 'Mot de passe changé avec succès']);
         }
-        //return $this->twig->render('Security/forgot.html.twig', ['errors' => $errors]);
     }
 }

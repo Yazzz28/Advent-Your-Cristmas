@@ -76,9 +76,9 @@ class DashboardUserManager extends AbstractManager
 
     public function insertContenu(int $idBlague, int $idCadeau, int $idRecette, int $idFilm, string $date, int $idUser)
     {
-        $statement = $this->pdo->prepare("INSERT INTO contenu (jour, user_id, blague_id, recette_id, cadeau_id) 
-        VALUES (:jour, :userID, :blagueID, :recetteID, :cadeauID)");
-        $statement->bindValue("jour", $date);
+        $statement = $this->pdo->prepare("INSERT INTO contenu (day, user_id, blague_id, 
+        recette_id, cadeau_id, film_id) VALUES (:day, :userID, :blagueID, :recetteID, :cadeauID, :filmID)");
+        $statement->bindValue("day", $date);
         $statement->bindValue("userID", $idUser);
         $statement->bindValue("blagueID", $idBlague);
         $statement->bindValue("recetteID", $idRecette);

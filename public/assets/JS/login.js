@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.status === 'success') {
+                if (data.status_login === 'success') {
                     setTimeout(() => {
-                        const modal = document.querySelector('modal-center-1');
+                        const modal = document.querySelector('#modal-center-1');
                         modal.classList.remove('uk-open');
                         modal.classList.add('uk-close');
                     }, 800);
                     setTimeout(() => {
                         UIkit.notification({ message: data.message_success, status: 'success', pos: 'top-right' })
-                    }, 800);
+                    }, 1200);
                 }
                 if (data.errors) {
                     if (data.errors.email) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
 
-                if (data.status === 'error') {
+                if (data.status_login === 'error') {
                     UIkit.notification({ message: data.message_error, status: 'warning', pos: 'top-right' })
                 }
             })
