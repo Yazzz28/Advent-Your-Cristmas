@@ -2,11 +2,13 @@ use hackathon1
 -- SET NAMES utf8; --
 
 ALTER TABLE cadeau MODIFY idea VARCHAR(200);
+
 ALTER TABLE `hackathon1`.`recette` 
 DROP COLUMN `description`;
 
 ALTER TABLE `hackathon1`.`contenu` 
 DROP FOREIGN KEY `contenu_ibfk_5`;
+
 ALTER TABLE `hackathon1`.`contenu` 
 DROP INDEX `image_id` ;
 ;
@@ -62,7 +64,7 @@ INSERT INTO `recette` (`title`) VALUES ("Foie gras pur canard vegan");
 INSERT INTO `recette` (`title`) VALUES ("Tofu de viande de boeuf");
 INSERT INTO `recette` (`title`) VALUES ("Carpaccio de chient Tching Tchong");
 INSERT INTO `recette` (`title`) VALUES ("Boudin de mioche casse burne");
-INSERT INTO `recette` (`title`) VALUES ("Eau parce que papa est sortie chercher du lait de poule");
+INSERT INTO `recette` (`title`) VALUES ("Eau parce que papa est sortie chercher du lait");
 INSERT INTO `recette` (`title`) VALUES ("Grosse grosse bûche à la viande de Noël");
 INSERT INTO `recette` (`title`) VALUES ("Smegma de Lutin");
 INSERT INTO `recette` (`title`) VALUES ("Jus de rêne façon savoyarde");
