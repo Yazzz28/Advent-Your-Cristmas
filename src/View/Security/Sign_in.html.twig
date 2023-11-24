@@ -1,51 +1,22 @@
-{% extends 'layout.html.twig' %}
-{% block title %}
-	{{parent()}}- Inscription
-{% endblock %}
 
-{% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/loginStyle.css">
-{% endblock %}
+<div class="uk-container uk-position-center">
+	<div id="modal-center-2" class="uk-flex-top pop-up modal-center-2" uk-modal>
+		<div class="uk-modal-dialog container  uk-modal-body uk-margin-auto-vertical div_login ">
+			<button class="uk-modal-close-default" type="button" uk-close></button>
+			<h1 class='uk-text-center'>Inscription</h1>
+			<div class="line"></div>
+			<form class='form-sign' id="signin" method="post">
+				
+				<input class="input-sign uk-input" name="firstname" type="text" placeholder="Prénom" id="errorFirstname">
+							
+				<input class="input-sign uk-input" name="email" type="mail" placeholder="Email" id="errorEmail">
+				
+				<input class="input-sign uk-input" name="password" type="password" placeholder="Mot de passe" id="errorPassword">
+				
+				<input class="uk-button" type="submit" value="inscription"/>
+			</form>
+			<div class="line"></div>
 
-{% block content %}
-	<div class="uk-container uk-position-center">
-		<div id="modal-center-2" class="uk-flex-top pop-up modal-center-1" uk-modal>
-			<div class="uk-modal-dialog container  uk-modal-body uk-margin-auto-vertical div_login">
-				<button class="uk-modal-close-default" type="button" uk-close></button>
-				<h1>Inscription</h1>
-				<div class="line"></div>
-				<form method="post">
-					{% if errors.compte is defined %}
-						<div class="uk-alert-danger" uk-alert>
-							<a class="uk-alert-close" uk-close></a>
-							<p>{{ errors.compte }}</p>
-						</div>
-					{% endif %}
-					<input class="form-input uk-input" name="firstname" type="text" placeholder="Prénom">
-					{% if errors.firstname is defined %}
-						<div class="uk-alert-danger" uk-alert>
-							<a class="uk-alert-close" uk-close></a>
-							<p>{{ errors.firstname }}</p>
-						</div>
-					{% endif %}
-					<input class="form-input uk-input" name="email" type="mail" placeholder="Email">
-					{% if errors.email is defined %}
-						<div class="uk-alert-danger" uk-alert>
-							<a class="uk-alert-close" uk-close></a>
-							<p>{{ errors.email }}</p>
-						</div>
-					{% endif %}
-					<input class="form-input uk-input" name="password" type="password" placeholder="Mot de passe">
-					{% if errors.password is defined %}
-						<div class="uk-alert-danger" uk-alert>
-							<a class="uk-alert-close" uk-close></a>
-							<p>{{ errors.password }}</p>
-						</div>
-					{% endif %}
-					<button class="uk-button uk-button-primary">Inscription</button>
-					<div class="line"></div>
-				</form>
-			</div>
 		</div>
 	</div>
-{% endblock %}
+</div>
