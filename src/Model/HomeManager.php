@@ -18,7 +18,7 @@ class HomeManager extends AbstractManager
 
     public function selectAllContenu(string $orderBy = '', string $direction = 'ASC'): array
     {
-        $query = 'SELECT contenu.id, contenu.jour, blague.story, film.movie_title, recette.title,
+        $query = 'SELECT contenu.id, contenu.day, blague.story, film.movie_title, recette.title,
         cadeau.idea FROM ' . static::TABLE . ' INNER JOIN cadeau ON cadeau.id=contenu.cadeau_id 
         INNER JOIN blague ON blague.id=contenu.blague_id
         INNER JOIN recette ON recette.id = contenu.recette_id 

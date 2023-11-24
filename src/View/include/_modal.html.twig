@@ -3,12 +3,12 @@
     <div class="modal-calendar uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
       <button class="uk-modal-close-default" type="button" uk-close></button>
         <h2 class='titre-calendrier uk-text-center'>Recette du jour:</h2>
-        <div class='calendar-content uk-text-center'>{{ dump(contents)}}</div>
+        <div class='calendar-content uk-text-center'> {{ contents[i].title}} </div>
         <h2 class='titre-calendrier uk-text-center'>Blague du jour:</h2>
-        <div class='calendar-content uk-text-center'>{{ contents.blague }}</div>
+        <div class='calendar-content uk-text-center'>{{ contents[i].story }}</div>
         <h2 class='titre-calendrier uk-text-center'>Cadeau pourri:</h2>
-        <div class='calendar-content uk-text-center'>{{ contents.cadeau }}</div>
+        <div class='calendar-content uk-text-center'>{{ contents[i].idea }}</div>
         <h2 class='titre-calendrier uk-text-center'>Film du jour:</h2>
-        <div class='calendar-content uk-text-center'>{{ contents.film }}</div>
+        <div class='calendar-content uk-text-center'>{{ contents[i].movie_title }}</div>
     </div>
   </div>

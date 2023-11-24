@@ -13,16 +13,19 @@ class HomeController extends AbstractController
     {
 
         $homeManager = new HomeManager();
-        $contents = $homeManager->selectAllContenu("jour");
-        return $this->twig->render('Home/index.html.twig', ['contents' => $contents]);
+        $contents = $homeManager->selectAllContenu("day");
+        $newContents = [];
+        foreach ($contents as $content) {
+            for ($i = 0; $i <= 24; $i++) {
+                if ($i === (int)substr($content["day"], -2)) {
+                    $newContents[$i - 1] = $content;
+                }
+            }
+        }
+
+        return $this->twig->render('Home/index.html.twig', ['contents' => $newContents]);
     }
 
-    public function showModal()
-    {
-
-
-        //return $this->twig->render('Home/index.html.twig', ['contents' => $contents]);
-    }
 
     public function selectDate($id)
     {
