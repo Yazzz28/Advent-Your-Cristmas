@@ -2,6 +2,7 @@
 
 @import './navbar.css';
 @import './loginStyle.css';
+@import url('modal.css');
 @import './home_style.css';
 
 body {
