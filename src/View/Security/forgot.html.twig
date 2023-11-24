@@ -1,45 +1,30 @@
-{% extends 'layout.html.twig' %}
-{% block title %}
-	{{ parent() }}- Nouveau mot de passe
-{% endblock %}
 
-
-{% block content %}
 	<div class="uk-container uk-position-center uk-flex-column">
-		<h1>Réinitialisation du mot de passe</h1>
-		<div class="line"></div>
-		<form method="POST">
-			<div class="uk-margin">
-				<div class="uk-inline">
-					<span class="uk-form-icon" uk-icon="icon: user"></span>
-					<input class="uk-input" type="text" aria-label="Not clickable icon" name="email" placeholder="Votre email"/>
-					{% if errors.email is defined %}
-						<div class="uk-alert-danger" uk-alert>
-							<a class="uk-alert-close" uk-close></a>
-							<p>{{ errors.email }}</p>
+		<div id="modal-center-3" class="uk-flex-top pop-up modal-center-1" uk-modal>
+			<div class="uk-modal-dialog container  uk-modal-body uk-margin-auto-vertical div_user">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<h1>Réinitialisation du mot de passe</h1>
+				<div class="line"></div>
+				<form class='user-form' id='forgot' method="POST">
+					<div class="uk-margin">
+						<div class="uk-inline">
+							<span class="uk-form-icon" uk-icon="icon: user"></span>
+							<input class="uk-input" type="text" aria-label="Not clickable icon" name="email" placeholder="Votre email" id="errorEmailForgot"/>
 						</div>
-					{% endif %}
-				</div>
-			</div>
+					</div>
 
-			<div class="uk-margin">
-				<div class="uk-inline">
-					<span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-					<input class="uk-input" type="password" aria-label="Not clickable icon" name="password" placeholder="Mot de passe"/>
-					{% if errors.password is defined %}
-						<div class="uk-alert-danger" uk-alert>
-							<a class="uk-alert-close" uk-close></a>
-							<p>{{ errors.password }}</p>
+					<div class="uk-margin">
+						<div class="uk-inline">
+							<span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+							<input class="uk-input" type="password" aria-label="Not clickable icon" name="password" placeholder="Mot de passe"/>
 						</div>
-					{% endif %}
-				</div>
+					</div>
+					<div class="uk-flex div-btn">
+						<input class="uk-button uk-button-default" href="" type="submit"/>
+					</div>
+				</form>
+				<div class="line"></div>
+				<a class="uk-button uk-button-default" href="#modal-center-1" data-uk-toggle="#modal-center" uk-toggle>Se connecter</a>
 			</div>
-			<div class="uk-flex div-btn">
-				<input class="uk-button uk-button-default" href="" type="submit"/>
-			</div>
-		</form>
-		<div class="line"></div>
-		<a class="uk-button uk-button-default" href="/login">Se connecter</a>
+		</div>
 	</div>
-
-{% endblock %}

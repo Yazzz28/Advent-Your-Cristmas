@@ -1,5 +1,16 @@
-.body404 {
-    background: url(/assets/images/page404.jpg);
+.body-404 {
+    background: url(../images/page404.jpg);
     background-position: center;
     background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton-404 {
+    font-size: 2rem;
+    background-color: #6FD7A3;
+    border-radius: 10px;
+    border: solid 5px #FD4755;
 }

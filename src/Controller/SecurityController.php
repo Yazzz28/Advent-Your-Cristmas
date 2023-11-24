@@ -23,22 +23,26 @@ class SecurityController extends AbstractController
             if ($_POST['password'] == '') {
                 $errors['password'] = 'Veuillez renseigner votre password';
             }
+            if ($errors) {
+                return json_encode(['errorsLogin' => $errors]);
+            }
 
 
-            if (!$errors) {
+
                 $securityManager = new SecurityManager();
                 $user = $securityManager->userLogin($_POST);
 
-                if ($user && password_verify($_POST['password'], $user['password'])) {
-                    $_SESSION['islogin'] = true;
-                    $_SESSION['email'] = $user['email'];
-                    header('Location:/');
-                } else {
-                    $errors['login'] = 'Email ou mot de passe incorrect';
-                }
+            if ($user && password_verify($_POST['password'], $user['password'])) {
+                $_SESSION['islogin'] = true;
+                $_SESSION['email'] = $user['email'];
+                return json_encode(['status_login' => 'success', 'message_success' => 'Connexion réussie']);
+                //header('Location:/');
+            } else {
+                return json_encode(['status_login' => 'errors', 'message_error'
+                => 'Email ou mot de passe incorrect']);
             }
         }
-        return $this->twig->render('Security/login.html.twig', ['errors' => $errors]);
+        //return $this->twig->render('Security/login.html.twig', ['errors' => $errors]);
     }
 
     public function logout()
@@ -101,19 +105,22 @@ class SecurityController extends AbstractController
                 $errors['email'] = 'Veuillez renseigner votre email';
             }
 
+            if ($errors) {
+                return json_encode(['errorsForgot' => $errors]);
+            }
 
-            if (!$errors) {
+
+
                 $securityManager = new SecurityManager();
                 $user = $securityManager->userResetPassword($_POST);
-                if ($user) {
-                    $_SESSION['islogin'] = true;
-                    $_SESSION['email'] = $user['email'];
-                    header('Location:/');
-                } else {
-                    $errors['login'] = 'Email ou mot de passe incorrect';
-                }
+            if ($user) {
+                return json_encode(['status_forgot' => 'errorsForgot', 'message_error' => 'Erreur de saisie']);
+                //header('Location:/');
+            } else {
+                return json_encode((['status_forgot' => 'success', 'message_success' =>
+                'Votre mot de passe a bien été modifié']));
             }
         }
-        return $this->twig->render('Security/forgot.html.twig', ['errors' => $errors]);
+        //return $this->twig->render('Security/forgot.html.twig', ['errors' => $errors]);
     }
 }

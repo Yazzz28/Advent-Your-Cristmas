@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @import './navbar.css';
 @import './loginStyle.css';
-@import url('modal.css');
+@import './modal.css';
 @import './home_style.css';
 @import url('page404.css');
 
-body {
-    font-family: "Roboto", sans-serif;
+:root{
+   --test-color: #6FD7A3; 
 }
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+@import url('dashboard-user.css');
