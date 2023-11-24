@@ -91,7 +91,7 @@ class DashboardUserManager extends AbstractManager
     public function verifDate(string $date)
     {
         // prepared request
-        $statement = $this->pdo->prepare("SELECT * FROM contenu WHERE jour=:date");
+        $statement = $this->pdo->prepare("SELECT * FROM contenu WHERE day=:date");
         $statement->bindValue('date', $date, \PDO::PARAM_STR);
         $statement->execute();
 
