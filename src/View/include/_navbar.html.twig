@@ -3,15 +3,16 @@
 		<li>
 			<a class="a-nav" href="/">Accueil</a>
 		</li>
+
 		{% if session.islogin == true %}
-		<div class='uk-flex'>
-			<li>
-				<a class="a-nav uk-margin-right" href="logout">Logout</a>
-			</li>
-			<li>
-				<a class="a-nav" href="dashboard">Dashboard</a>
-			</li>
-		</div>
+			<div class='uk-flex'>
+				<li>
+					<a class="a-nav uk-margin-right" href="logout">Logout</a>
+				</li>
+				<li>
+					<a class="a-nav" href="dashboard">Dashboard</a>
+				</li>
+			</div>
 		{% else %}
 			<li>
 				<a class="a-nav" href="#modal-center-1" data-uk-toggle="#modal-center" uk-toggle>Login</a>
@@ -29,6 +30,14 @@
 	<div class='line-nav-right-out'></div>
 </div>
 
-<li class='img-logo'>
-	<img src="/assets/images/logo-pere-noel.png" alt="logo-pere-noel" width="90px">
+<li class='img-logo'>	
+	<audio id="easter" src="/assets/audio/yavuz.m4a"></audio>
+	<a href="#modal-example" data-uk-toggle="#modal-center" uk-toggle><img id="logo" src="/assets/images/logo-pere-noel.png" alt="logo-pere-noel" width="90px"></a>
+	<div id="modal-example" uk-modal>
+		<div class="uk-modal-dialog uk-modal-body div_user uk-height-1-2 uk-width-1-2">
+			<h2 class="uk-modal-title uk-text-center" >Bonnes fêtes de fin d'année</h2>
+			<img src="assets/images/modal-t-une-grosse-machine.jpg" id="yavuz" alt="">
+		</div>
+	</div>
+
 </li>

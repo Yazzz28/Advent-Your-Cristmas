@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         const modal = document.querySelector("#modal-center-3");
                         modal.classList.remove("uk-open");
                         modal.classList.add("uk-close");
+                        window.location.reload()
                     }, 800);
                     setTimeout(() => {
                         UIkit.notification({
