@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.status === 'success') {
+                if (data.status_login === 'success') {
                     setTimeout(() => {
-                        const modal = document.querySelector('modal-center-1');
+                        const modal = document.querySelector('#modal-center-1');
                         modal.classList.remove('uk-open');
                         modal.classList.add('uk-close');
                     }, 800);
