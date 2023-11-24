@@ -40,3 +40,15 @@ button.btn-dashboard-form {
 button.btn-dashboard-form:hover {
     background-color: #FD4755;
 }
+
+h2 {
+    color:white;
+    font-weight:500;
+    font-size: 3rem;
+}
+
+label {
+    color: white;
+    font-weight:500;
+    font-size: 1.5rem;
+}
