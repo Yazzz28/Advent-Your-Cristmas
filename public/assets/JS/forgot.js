@@ -1,4 +1,4 @@
-const forgot = document.getElementById("forgot");
+const forgot = document.getElementById('forgot');
 
 document.addEventListener("DOMContentLoaded", function () {
     forgot.addEventListener("submit", (event) => {

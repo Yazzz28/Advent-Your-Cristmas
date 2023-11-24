@@ -1,14 +1,3 @@
-{% extends 'layout.html.twig' %}
-{% block title %}
-	{{ parent() }}- Connection
-{% endblock %}
-
-
-{% block stylesheet %}
-	<link rel="stylesheet" href="/assets/css/loginStyle.css">
-{% endblock %}
-
-{% block content %}
 <div class="uk-container uk-position-center">
 		<div id="modal-center-1" class="uk-flex-top pop-up modal-center-1" uk-modal>
 			<div class="uk-modal-dialog container  uk-modal-body uk-margin-auto-vertical div_user">
@@ -28,6 +17,10 @@
 							{% endif %}
 						</div>
 					</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 22e5d8cc2f0a85788c89ccbe2c32e6f4b8fd372f
 					<div class="uk-margin">
 						<div class="uk-inline">
 							<span 
@@ -48,14 +41,14 @@
 				<div class="other-link">
 					<h4>
 						Vous n'avez pas de compte ? merci de vous
-        <a href="#modal-center-2" data-uk-toggle=" #modal-center " uk-toggle>enregistrer.</a>
+        <a href="#modal-center-2" data-uk-toggle="#modal-center" uk-toggle>enregistrer.</a>
 					</h4>
 					<h4>Mot de passe oublié ?
-						<a href="#modal-center-3">Nouveau mot de passe.
+						<a href="#modal-center-3" data-uk-toggle="#modal-center" uk-toggle>Nouveau mot de passe.
 						</a>
 					</h4>
 				</div>
 			</div>
 		</div>
 	</div>
-{% endblock %}
+

@@ -4,6 +4,10 @@
 @import './modal.css';
 @import './home_style.css';
 
+:root{
+   --test-color: #6FD7A3; 
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
