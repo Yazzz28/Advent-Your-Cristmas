@@ -22,6 +22,8 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+--
+
 CREATE TABLE `user` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `firstname` VARCHAR(50) NOT NULL,
@@ -36,7 +38,7 @@ CREATE TABLE blague (
 
 CREATE TABLE recette (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  title TEXT NOT NULL, 
+  title TEXT NOT NULL 
 );
 
 CREATE TABLE cadeau (
