@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/assets/css/style.css">
 
 		<title>
+
 			{% block title %}
 				Advent'your Xmas
 			{% endblock %}
@@ -16,10 +17,12 @@
 
 		{% block stylesheet %}
 		<link rel="stylesheet" href="/assets/css/navbar.css">
-		{% endblock %}
-		</head>
 
-		<body>
+		{% endblock %}
+	</head>
+
+	<body>
+
 
 			{% include "/include/_navbar.html.twig" %}
 			{% include "/Security/Sign_in.html.twig" %}
@@ -34,3 +37,4 @@
 			<script src="/assets/JS/signin.js"></script>
 		</body>
 	</html>
+
