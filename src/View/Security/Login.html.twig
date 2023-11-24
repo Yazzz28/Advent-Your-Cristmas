@@ -1,0 +1,50 @@
+<div class="uk-container uk-position-center">
+		<div id="modal-center-1" class="uk-flex-top pop-up modal-center-1" uk-modal>
+			<div class="uk-modal-dialog container  uk-modal-body uk-margin-auto-vertical div_user">
+				<button class="uk-modal-close-default" type="button" uk-close></button>
+				<h1>Merci de vous connecter</h1>
+				<div class="line"></div>
+				<form method="POST" id="login" class = "user-form">
+					<div class="uk-margin">
+						<div class="uk-inline">
+							<span class="uk-form-icon" uk-icon="icon: user"></span>
+							<input class="uk-input" id="errorsEmail" type="text" aria-label="Not clickable icon" name="email" placeholder="Votre email"/>
+							{% if errors.email is defined %}
+								<div class="uk-alert-danger" uk-alert>
+									<a class="uk-alert-close" uk-close></a>
+									<p>{{ errors.email }}</p>
+								</div>
+							{% endif %}
+						</div>
+					</div>
+					<div class="uk-margin">
+						<div class="uk-inline">
+							<span 
+                            class="uk-form-icon uk-form-icon-flip" 
+                            uk-icon="icon: lock"></span>
+							<input class="uk-input" type="password" id="errorsPassword" aria-label="Not clickable icon" name="password" placeholder="Mot de passe"/>
+							{% if errors.password is defined %}
+								<div class="uk-alert-danger" uk-alert>
+									<a class="uk-alert-close" uk-close></a>
+									<p>{{ errors.password }}</p>
+								</div>
+							{% endif %}
+						</div>
+					</div>
+					<input class="uk-button uk-button-default" href="/" type="submit" value="Se connecter">
+				</form>
+				<div class="line"></div>
+				<div class="other-link">
+					<h4>
+						Vous n'avez pas de compte ? merci de vous
+        <a href="#modal-center-2" data-uk-toggle="#modal-center" uk-toggle>enregistrer.</a>
+					</h4>
+					<h4>Mot de passe oublié ?
+						<a href="#modal-center-3" data-uk-toggle="#modal-center" uk-toggle>Nouveau mot de passe.
+						</a>
+					</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+

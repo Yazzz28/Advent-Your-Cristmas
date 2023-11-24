@@ -1,6 +1,31 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}		
+  <link rel="stylesheet" href="/assets/css/home_style.css">
+{% endblock %}
+
 {% block content %}
-    <h1>Hello Wilder !</h1>
-    <p>Find a complete CRUD example on <a href="/items">/items</a> page.</p>
+
+<h1 class="uk-text-center">Calendrier de l'avent</h1>
+
+<section class='section-home'>
+
+{% for i in 0..23 %}
+<article class="container">
+  <div class="cube" id="{{ i }}">
+    <div class="face front">
+      <p>{{i+1}}</p>
+    </div>
+    <div class="face back">
+    <a href="#modal-center{{ i }}" uk-toggle><img src="/assets/images/boite-cadeau.png"></a>
+    </div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+  </div>
+  </article>
+  {% include '/include/_modal.html.twig' %}
+{% endfor %}
+</section>
 {% endblock %}

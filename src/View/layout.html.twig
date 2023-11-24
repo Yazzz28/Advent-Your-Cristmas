@@ -1,21 +1,44 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/images/favicon.png">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/assets/images/logo-pere-noel.png">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css"/>
+		<link rel="stylesheet" href="/assets/css/style.css">
 
-    <title>{% block title %}{% endblock %}</title>
+		<title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    {% block stylesheet %}{% endblock %}
-</head>
+			{% block title %}
+				Advent'your Xmas
+			{% endblock %}
+		</title>
 
-<body>
-    {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
-</body>
-</html>
+		{% block stylesheet %}
+		<link rel="stylesheet" href="/assets/css/navbar.css">
 
+		{% endblock %}
+	</head>
+
+	<body>
+			{% include "/include/_navbar.html.twig" %}
+			{% include '/Security/Login.html.twig' %}
+			{% include "/Security/Sign_in.html.twig" %}
+			{% include "/Security/forgot.html.twig" %}
+
+			{% block content %}
+			{% endblock %}
+
+			{% block javascript %}
+			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
+			<script src="/assets/JS/script.js"></script>
+			<script src="/assets/JS/login.js"></script>
+			<script src="/assets/JS/signin.js"></script>
+			<script src="/assets/JS/forgot.js"></script>
+			<script src="/assets/JS/easter.js"></script>
+			{% endblock %}
+		</body>
+	</html>
 

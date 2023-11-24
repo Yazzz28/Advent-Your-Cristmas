@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './navbar.css';
+@import './loginStyle.css';
+@import './modal.css';
+@import './home_style.css';
+@import url('page404.css');
+@import url('dashboard-user.css');
+
 body {
-    color: #f76c6c;
+    font-family: "Montserrat", sans-serif;
 }

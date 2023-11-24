@@ -13,4 +13,12 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'login' => ['SecurityController', 'login',],
+    'signin' => ['SecurityController', 'signin',],
+    'logout' => ['SecurityController', 'logout',],
+    'forgot' => ['SecurityController', 'resetPassword'],
+    'error404' => ['HomeController', 'pageError',],
+    'user/dashboard' => ['DashboardUserController', 'dashboard'],
+    'selectCadeauRandom' => ["DashboardUserController", "selectRandom"],
+    'dashboard' => ['DashboardUserController', 'dashboard',],
 ];

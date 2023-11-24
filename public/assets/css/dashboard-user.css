@@ -1,0 +1,54 @@
+.main-dashboard {
+    margin: 5rem 20rem 0 20rem;
+    height: 100vh;
+}
+
+.section-dashboard-user {
+    background-color:#6FD7A3;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    border-radius: 15px;
+}
+
+div.input-form-dashboard {
+    margin-top: 2rem;
+}
+
+.form-dashboard {
+    width: 50rem;
+    justify-self: center;
+    background-color: #6FD7A3;
+    
+}
+
+div.input-form-dashboard label {
+    font-size: 1.5rem;
+}
+
+button.btn-dashboard-form {
+    background-color: white;
+    border: 3px solid #C4E2FF;
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+    transition: 0.3s;
+    color: #FD4755;
+    font-weight: 600;
+}
+
+button.btn-dashboard-form:hover {
+    background-color: #FD4755;
+}
+
+h2 {
+    color:white;
+    font-weight:500;
+    font-size: 3rem;
+}
+
+label {
+    color: white;
+    font-weight:500;
+    font-size: 1.5rem;
+}
