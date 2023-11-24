@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         UIkit.notification({ message: data.message_success, status: 'success', pos: 'top-right' })
                     }, 1200);
                 }
-                if (data.errors) {
-                    if (data.errors.email) {
+                if (data.errorsLogin) {
+                    if (data.errorsLogin.email) {
                         const errorsLoginEmail = document.querySelector('#errorsEmail')
-                        errorsLoginEmail.setAttribute('placeholder', data.errors.email)
+                        errorsLoginEmail.setAttribute('placeholder', data.errorsLogin.email)
                     }
-                    if (data.errors.password) {
+                    if (data.errorsLogin.password) {
                         const errorsLoginPassword = document.querySelector('#errorsPassword');
-                        errorsLoginPassword.setAttribute('placeholder', data.errors.password)
+                        errorsLoginPassword.setAttribute('placeholder', data.errorsLogin.password)
                     }
                 }
 
