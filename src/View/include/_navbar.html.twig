@@ -1,18 +1,32 @@
 <nav class="navbar ">
-    <ul class="ul-nav uk-navbar-nav">
-        <li><a class="a-nav" href="/">Accueil</a></li>
-        <li><a class="a-nav" href="login">Login</a></li>
-    </ul>
-    <div class="div-line">
-        <div class='line-nav-left'></div>
-        <div class='line-nav-right'></div>
-    </div>
+	<ul class="ul-nav uk-navbar-nav">
+		<li>
+			<a class="a-nav" href="/">Accueil</a>
+		</li>
+		{% if session.islogin == true %}
+			<li>
+				<a class="a-nav" href="logout">Logout</a>
+			</li>
+			<li>
+				<a href="dashboard">Dashboard</a>
+			</li>
+		{% else %}
+			<li>
+				<a class="a-nav" href="#modal-center-1" data-uk-toggle="#modal-center" uk-toggle>Login</a>
+
+			</li>
+		{% endif %}
+	</ul>
+	<div class="div-line">
+		<div class='line-nav-left'></div>
+		<div class='line-nav-right'></div>
+	</div>
 </nav>
-    <div class="div-line">
-        <div class='line-nav-left-out'></div>
-        <div class='line-nav-right-out'></div>
-    </div>
- 
+<div class="div-line">
+	<div class='line-nav-left-out'></div>
+	<div class='line-nav-right-out'></div>
+</div>
+
 <li class='img-logo'>
-    <img  src="/assets/images/logo-pere-noel.png" alt="logo-pere-noel" width="90px">
+	<img src="/assets/images/logo-pere-noel.png" alt="logo-pere-noel" width="90px">
 </li>

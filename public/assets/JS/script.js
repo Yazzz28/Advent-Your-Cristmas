@@ -12,6 +12,7 @@ function ouverture(i) {
     document.getElementById(i).querySelector(".front").classList.toggle("open");
 }
 
+
 function generateContent() {
     
     //Génére une blague aléatoire

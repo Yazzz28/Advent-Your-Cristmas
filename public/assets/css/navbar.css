@@ -29,25 +29,25 @@
 }
 
 .line-nav-left {
-    border: solid black 2px;
+    border: solid white 2px;
     width: 40%;
     border-radius: 0 40px 0 0;
 }
 
 .line-nav-left-out {
-    border: solid black 2px;
+    border: solid white 2px;
     width: 40%;
     border-radius: 0 0 40px 0;
 }
 
 .line-nav-right {
-    border: solid black 2px;
+    border: solid white 2px;
     width: 40%;
     border-radius: 40px 0 0 0;
 }
 
 .line-nav-right-out {
-    border: solid black 2px;
+    border: solid white 2px;
     width: 40%;
     border-radius: 0 0 0 40px;
 }
