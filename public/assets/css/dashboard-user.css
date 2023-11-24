@@ -30,12 +30,25 @@ div.input-form-dashboard label {
 
 button.btn-dashboard-form {
     background-color: white;
-    border: 2px solid #FD4755;
+    border: 3px solid #C4E2FF;
     border-radius: 0.5rem 0.5rem 0.5rem 0;
     transition: 0.3s;
     color: #FD4755;
+    font-weight: 600;
 }
 
 button.btn-dashboard-form:hover {
     background-color: #FD4755;
+}
+
+h2 {
+    color:white;
+    font-weight:500;
+    font-size: 3rem;
+}
+
+label {
+    color: white;
+    font-weight:500;
+    font-size: 1.5rem;
 }
