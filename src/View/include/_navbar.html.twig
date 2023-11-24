@@ -4,12 +4,14 @@
 			<a class="a-nav" href="/">Accueil</a>
 		</li>
 		{% if session.islogin == true %}
+		<div class='uk-flex'>
 			<li>
-				<a class="a-nav" href="logout">Logout</a>
+				<a class="a-nav uk-margin-right" href="logout">Logout</a>
 			</li>
 			<li>
-				<a href="dashboard">Dashboard</a>
+				<a class="a-nav" href="dashboard">Dashboard</a>
 			</li>
+		</div>
 		{% else %}
 			<li>
 				<a class="a-nav" href="#modal-center-1" data-uk-toggle="#modal-center" uk-toggle>Login</a>

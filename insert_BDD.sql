@@ -1,5 +1,6 @@
 use hackathon1
 -- SET NAMES utf8; --
+
 ALTER TABLE cadeau MODIFY idea VARCHAR(200);
 ALTER TABLE `hackathon1`.`recette` 
 DROP COLUMN `description`;
