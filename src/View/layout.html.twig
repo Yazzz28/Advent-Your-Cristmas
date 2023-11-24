@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/assets/css/style.css">
 
 		<title>
+
 			{% block title %}
 				Advent'your Xmas
 			{% endblock %}
@@ -16,10 +17,12 @@
 
 		{% block stylesheet %}
 		<link rel="stylesheet" href="/assets/css/navbar.css">
-		{% endblock %}
-		</head>
 
-		<body>
+		{% endblock %}
+	</head>
+
+	<body>
+
 
 			{% include "/include/_navbar.html.twig" %}
 
@@ -39,3 +42,4 @@
 			{% endblock %}
 		</body>
 	</html>
+

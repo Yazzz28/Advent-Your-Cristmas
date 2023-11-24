@@ -16,5 +16,5 @@ return [
     'login' => ['SecurityController', 'login',],
     'signin' => ['SecurityController', 'signin',],
     'logout' => ['SecurityController', 'logout',],
-    'forgot' => ['SecurityController', 'resetPassword'],
+    'forgot' => ['SecurityController', 'resetPassword']
 ];
