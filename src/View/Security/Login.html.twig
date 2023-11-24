@@ -1,3 +1,6 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ parent() }}- Connection {% endblock %}
+
 {% block content %}
 	<div class="uk-container uk-align-center">
 		<div id="modal-center-1" class="uk-flex-top pop-up modal-center-1" uk-modal>
@@ -18,7 +21,6 @@
 							{% endif %}
 						</div>
 					</div>
-
 					<div class="uk-margin">
 						<div class="uk-inline">
 							<span 
@@ -39,7 +41,7 @@
 				<div class="other-link">
 					<h4>
 						Vous n'avez pas de compte ? merci de vous
-						<a href="signin">enregistrer.</a>
+        <a href="#modal-center-2" data-uk-toggle=" #modal-center " uk-toggle>enregistrer.</a>
 					</h4>
 					<h4>Mot de passe oublié ?
 						<a href="forgot">Nouveau mot de passe.

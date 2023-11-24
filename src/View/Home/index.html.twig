@@ -1,19 +1,22 @@
 {% extends 'layout.html.twig' %}
 
-{% block content %}
 {% block stylesheet %}		
   <link rel="stylesheet" href="/assets/css/home_style.css">
 {% endblock %}
+
+{% block content %}
+
 <h1 class="uk-text-center">Calendrier de l'avent</h1>
 <section>
+
 {% for i in 0..23 %}
 <article class="container">
-  <div class="cube" id="{{i}}">
+  <div class="cube" id="{{ i }}">
     <div class="face front">
       <p>{{i+1}}</p>
     </div>
     <div class="face back">
-    <img src="{{images[i]}}" >
+    <a href="#modal-center{{ i }}" uk-toggle><img src="/assets/images/boite-cadeau.png"></a>
     </div>
     <div class="face right"></div>
     <div class="face left"></div>
@@ -21,6 +24,7 @@
     <div class="face bottom"></div>
   </div>
   </article>
+  {% include '/include/_modal.html.twig' %}
 {% endfor %}
 </section>
 {% endblock %}

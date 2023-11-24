@@ -22,7 +22,10 @@
 		<body>
 
 			{% include "/include/_navbar.html.twig" %}
-			 {% include '/Security/Login.html.twig' %}
+
+			{% include '/Security/Login.html.twig' %}
+			{% include "/Security/Sign_in.html.twig" %}
+
 			{% block content %}
 
 			 {% endblock %}
@@ -32,6 +35,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
 			<script src="/assets/JS/script.js"></script>
 			<script src="/assets/JS/login.js"></script>
+			<script src="/assets/JS/signin.js"></script>
 			{% endblock %}
 		</body>
 	</html>
