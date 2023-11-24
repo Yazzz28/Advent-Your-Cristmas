@@ -5,7 +5,7 @@
 @import './modal.css';
 @import './home_style.css';
 @import url('page404.css');
-
+@import url('dashboard-user.css');
 :root{
    --test-color: #6FD7A3; 
 }
@@ -14,4 +14,3 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-@import url('dashboard-user.css');

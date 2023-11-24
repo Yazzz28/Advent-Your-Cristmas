@@ -1,10 +1,16 @@
-section.section-dashboard-user {
+.main-dashboard {
+    margin: 5rem 20rem 0 20rem;
+    height: 100vh;
+}
+
+.section-dashboard-user {
     background-color:#6FD7A3;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
+    border-radius: 15px;
 }
 
 div.input-form-dashboard {
@@ -14,6 +20,8 @@ div.input-form-dashboard {
 .form-dashboard {
     width: 50rem;
     justify-self: center;
+    background-color: #6FD7A3;
+    
 }
 
 div.input-form-dashboard label {
@@ -22,13 +30,12 @@ div.input-form-dashboard label {
 
 button.btn-dashboard-form {
     background-color: white;
-    border: none;
-    border-radius: 0.5rem;
+    border: 2px solid #FD4755;
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
     transition: 0.3s;
-
+    color: #FD4755;
 }
 
 button.btn-dashboard-form:hover {
     background-color: #FD4755;
-
 }
