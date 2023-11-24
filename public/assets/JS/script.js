@@ -27,9 +27,7 @@ function generateContent() {
     const options = {
         method: 'GET',
         headers: {
-          accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZWJhMDE4MjkzZjI4YjhjOWI2MDU1YzFmYjk0MzgwMiIsInN1YiI6IjY1NWY3ZTZhMjQ0MTgyMDBhZDVjZjY3MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qCQLRlRvFiKBJf8VyWv65ail64LjIxfj6XN7r1k76M8'
-        }
+          accept: 'application/json'
       };
 
 
