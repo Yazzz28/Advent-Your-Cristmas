@@ -23,6 +23,9 @@ class SecurityController extends AbstractController
             if ($_POST['password'] == '') {
                 $errors['password'] = 'Veuillez renseigner votre password';
             }
+            if ($errors) {
+                return json_encode(['errorsLogin' => $errors]);
+            }
 
 
             if (!$errors) {
@@ -32,13 +35,15 @@ class SecurityController extends AbstractController
                 if ($user && password_verify($_POST['password'], $user['password'])) {
                     $_SESSION['islogin'] = true;
                     $_SESSION['email'] = $user['email'];
-                    header('Location:/');
+                    return json_encode(['status_login' => 'success', 'message_success' => 'Connexion réussie']);
+                    //header('Location:/');
                 } else {
-                    $errors['login'] = 'Email ou mot de passe incorrect';
+                    return json_encode(['status_login' => 'errors', 'message_error'
+                    => 'Email ou mot de passe incorrect']);
                 }
             }
         }
-        return $this->twig->render('Security/login.html.twig', ['errors' => $errors]);
+        //return $this->twig->render('Security/login.html.twig', ['errors' => $errors]);
     }
 
     public function logout()
