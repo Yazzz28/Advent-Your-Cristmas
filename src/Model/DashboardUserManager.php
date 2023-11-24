@@ -13,7 +13,7 @@ class DashboardUserManager extends AbstractManager
         return $statement->fetch();
     }
 
-    public function selectRandomRecette():array
+    public function selectRandomRecette(): array
     {
         $statement = $this->pdo->prepare("SELECT * FROM recette ORDER BY RAND() LIMIT 1");
 
@@ -74,14 +74,16 @@ class DashboardUserManager extends AbstractManager
         return $statement->fetch();
     }
 
-    public function insertContenu(int $idBlague, int $idCadeau, int $idRecette, int $idFilm, string $date, int $idUser) 
+    public function insertContenu(int $idBlague, int $idCadeau, int $idRecette, int $idFilm, string $date, int $idUser)
     {
-        $statement = $this->pdo->prepare("INSERT INTO contenu (jour, user_id, blague_id, recette_id, cadeau_id) VALUES (:jour, :userID, :blagueID, :recetteID, :cadeauID)");
+        $statement = $this->pdo->prepare("INSERT INTO contenu (jour, user_id, blague_id, recette_id, cadeau_id) 
+        VALUES (:jour, :userID, :blagueID, :recetteID, :cadeauID)");
         $statement->bindValue("jour", $date);
         $statement->bindValue("userID", $idUser);
         $statement->bindValue("blagueID", $idBlague);
         $statement->bindValue("recetteID", $idRecette);
         $statement->bindValue("cadeauID", $idCadeau);
+        $statement->bindValue("filmID", $idFilm);
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }

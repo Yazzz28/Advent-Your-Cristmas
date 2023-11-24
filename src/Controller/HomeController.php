@@ -12,16 +12,16 @@ class HomeController extends AbstractController
     public function index(): string
     {
 
-
-        return $this->twig->render('Home/index.html.twig');
+        $homeManager = new HomeManager();
+        $contents = $homeManager->selectAllContenu("jour");
+        return $this->twig->render('Home/index.html.twig', ['contents' => $contents]);
     }
 
     public function showModal()
     {
-        $homeManager = new HomeManager();
-        $contents = $homeManager->selectAll();
 
-        return $this->twig->render('Home/index.html.twig', ['contents' => $contents]);
+
+        //return $this->twig->render('Home/index.html.twig', ['contents' => $contents]);
     }
 
     public function selectDate($id)
