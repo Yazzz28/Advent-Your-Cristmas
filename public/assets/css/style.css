@@ -4,6 +4,7 @@
 @import './loginStyle.css';
 @import url('modal.css');
 @import './home_style.css';
+@import url('page404.css');
 
 body {
     font-family: "Roboto", sans-serif;

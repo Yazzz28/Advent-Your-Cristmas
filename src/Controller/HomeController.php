@@ -33,4 +33,9 @@ class HomeController extends AbstractController
 
         return $this->twig->render('Home/index.html.twig', ['dateDay' => $dateDay]);
     }
+
+    public function pageError()
+    {
+        return $this->twig->render('page404.html.twig');
+    }
 }

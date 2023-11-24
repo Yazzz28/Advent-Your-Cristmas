@@ -17,4 +17,5 @@ return [
     'signin' => ['SecurityController', 'signin',],
     'logout' => ['SecurityController', 'logout',],
     'forgot' => ['SecurityController', 'resetPassword'],
+    'error404' => ['HomeController', 'pageError',],
 ];
