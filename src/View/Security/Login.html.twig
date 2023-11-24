@@ -1,9 +1,6 @@
 {% extends 'layout.html.twig' %}
 {% block title %} {{ parent() }}- Connection {% endblock %}
 
-{% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/loginStyle.css">
-{% endblock %}
 
 {% block content %}
 <div class="uk-container uk-position-center">
@@ -56,9 +53,9 @@
     <div class= "other-link">
     <h4>
         Vous n'avez pas de compte ? merci de vous
-        <a href="signin">enregistrer.</a>
+        <a href="#modal-center-2" data-uk-toggle=" #modal-center " uk-toggle>enregistrer.</a>
     </h4>
-    <h4>Mot de passe oublié ? <a href="forgot">Nouveau mot de passe. </a></h4>
+    <h4>Mot de passe oublié ? <a href="forgot" >Nouveau mot de passe. </a></h4>
     </div>
 </div>
 {% endblock %}

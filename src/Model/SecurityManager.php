@@ -23,9 +23,9 @@ class SecurityManager extends AbstractManager
         $statement = $this->pdo->prepare("INSERT INTO " . static::TABLE .
             " (firstname, email, password) 
          VALUES (:firstname, :email, :password)");
-        $statement->bindValue('firstname', $user['firstname'], \PDO::PARAM_STR);
-        $statement->bindValue('email', $user['email'], \PDO::PARAM_STR);
-        $statement->bindValue('password', password_hash($user['password'], PASSWORD_DEFAULT), \PDO::PARAM_STR);
+        $statement->bindValue(':firstname', $user['firstname'], \PDO::PARAM_STR);
+        $statement->bindValue(':email', $user['email'], \PDO::PARAM_STR);
+        $statement->bindValue(':password', password_hash($user['password'], PASSWORD_DEFAULT), \PDO::PARAM_STR);
         $statement->execute();
 
         return;

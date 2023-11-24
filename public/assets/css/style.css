@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 @import './navbar.css';
-@import './home_style.css';
 @import './loginStyle.css';
+@import url('modal.css');
+@import './home_style.css';
 
 body {
     font-family: "Roboto", sans-serif;
