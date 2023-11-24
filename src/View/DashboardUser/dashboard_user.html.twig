@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/dashboard-user.css">
+
 {% endblock %}
 
 {% block content %}
@@ -12,38 +12,33 @@
 
         <div class="input-form-dashboard">
             <label for="generer">Voulez-vous générer votre contenu aléatoirement ?</label>
-            <button type="button" class="btn-dashboard-form uk-button uk-button-default" name="generer" id="generer" onclick=test()>Générer</button>
+            <button type="button" class="btn-dashboard-form uk-button uk-button-default" name="generer" id="generer" onclick=generateContent()>Générer</button>
         </div>
 
         <div class="input-form-dashboard">
-            <label for="recette">Votre recette du jour</label>
-            <textarea type="text" class="uk-textarea" name="recette" id="recette" rows="6"></textarea>
+            <label for="title_recipe">Idée de recette</label>
+            <input type="text" name="title_recipe" id="title_recipe" class="uk-input">
         </div>
 
         <div class="input-form-dashboard">
-            <label for="cadeau">Votre cadeau pourri</label>
+            <label for="cadeau">Idée de cadeau pourri</label>
             <input type="text" class="uk-input" name="cadeau" id="cadeau">
         </div>
 
         <div class="input-form-dashboard">
-            <label for="blague">Votre meilleure blague</label>
+            <label for="blague">Idée de meilleure blague</label>
             <textarea type="text" class="uk-textarea" name="blague" id="blague" rows="3"></textarea>
         </div>
 
         <div class="input-form-dashboard">
-            <label for="film">Votre film</label>
+            <label for="film">Idée de film</label>
             <input type="text" class="uk-input" name="film" id="film">
         </div>
 
         <div class="input-form-dashboard">
             <label for="date">Date du calendrier de l'avent</label>
-            <input type="date" class="uk-input" name="date" id="date">
-        </div>
-
-        <div class="input-form-dashboard" uk-form-custom>
-            <input type="file" aria-label="Custom controls">
-            <button class="btn-dashboard-form uk-button uk-button-default" type="button" tabindex="-1">Select</button>
-            <label for="">Enregistrer votre image</label>
+            <input type="date" class="uk-input" name="date" id="date" min="2023-12-01" max="2023-12-24">
+            {% if erreurs is defined %} {{erreurs.date}}{% endif %}
         </div>
 
         <div class="input-form-dashboard">
