@@ -1,15 +1,15 @@
 const forgot = document.getElementById('forgot');
 
-document.addEventListener("DOMContentLoaded", function () {
-    forgot.addEventListener("submit", (event) => {
-        event.preventDefault();
-        fetch("/forgot", {
-            method: "POST",
-            body: new FormData(forgot),
+document.addEventListener('DOMContentLoaded', function () {
+    forgot.addEventListener('submit', (event) => {
+        event.preventDefault()
+        fetch('/forgot', {
+            method: 'POST',
+            body: new FormData(forgot)
         })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.status_forgot === "success") {
+            .then(res => res.json())
+            .then(data => {
+                if (data.status_forgot === 'success') {
                     setTimeout(() => {
                         const modal = document.querySelector("#modal-center-3");
                         modal.classList.remove("uk-open");
@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         );
                     }
                 }
-            });
-    });
+            })
+    })
 });
