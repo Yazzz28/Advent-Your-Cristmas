@@ -30,10 +30,11 @@ div.input-form-dashboard label {
 
 button.btn-dashboard-form {
     background-color: white;
-    border: 2px solid #FD4755;
+    border: 3px solid #C4E2FF;
     border-radius: 0.5rem 0.5rem 0.5rem 0;
     transition: 0.3s;
     color: #FD4755;
+    font-weight: 600;
 }
 
 button.btn-dashboard-form:hover {
