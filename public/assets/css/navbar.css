@@ -56,3 +56,14 @@
     display: flex;
     justify-content: space-between;
 }
+
+.a-nav {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.a-nav:hover {
+    color: #FD4755;
+    transition: 0.4s;
+}

@@ -44,10 +44,10 @@ class SecurityManager extends AbstractManager
 
     public function userResetPassword(array $user)
     {
-        $statement = $this->pdo->prepare("UPDATE " . static::TABLE .
-            " SET password=:password WHERE email=:email");
-        $statement->bindValue('email', $user['email'], \PDO::PARAM_STR);
-        $statement->bindValue('password', password_hash($user['password'], PASSWORD_DEFAULT), \PDO::PARAM_STR);
+        $statement = $this->pdo->prepare(" UPDATE " . static::TABLE .
+            " SET password= :password WHERE email= :email ");
+        $statement->bindValue(':email', $user['emailF'], \PDO::PARAM_STR);
+        $statement->bindValue(':password', password_hash($user['passwordF'], PASSWORD_DEFAULT), \PDO::PARAM_STR);
         $statement->execute();
 
         return;

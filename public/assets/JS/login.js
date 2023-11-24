@@ -18,20 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     }, 800);
                     setTimeout(() => {
                         UIkit.notification({ message: data.message_success, status: 'success', pos: 'top-right' })
-                    }, 800);
+                    }, 1200);
                 }
-                if (data.errors) {
-                    if (data.errors.email) {
+                if (data.errorsLogin) {
+                    if (data.errorsLogin.email) {
                         const errorsLoginEmail = document.querySelector('#errorsEmail')
-                        errorsLoginEmail.setAttribute('placeholder', data.errors.email)
+                        errorsLoginEmail.setAttribute('placeholder', data.errorsLogin.email)
                     }
-                    if (data.errors.password) {
+                    if (data.errorsLogin.password) {
                         const errorsLoginPassword = document.querySelector('#errorsPassword');
-                        errorsLoginPassword.setAttribute('placeholder', data.errors.password)
+                        errorsLoginPassword.setAttribute('placeholder', data.errorsLogin.password)
                     }
                 }
 
-                if (data.status === 'error') {
+                if (data.status_login === 'error') {
                     UIkit.notification({ message: data.message_error, status: 'warning', pos: 'top-right' })
                 }
             })
