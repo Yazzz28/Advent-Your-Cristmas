@@ -4,31 +4,34 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="/assets/images/favicon.png">
+		<link rel="icon" href="/assets/images/logo-pere-noel.png">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css"/>
-		<link rel="stylesheet" href="/assets/css/style.css"> 			
+		<link rel="stylesheet" href="/assets/css/style.css">
 
 		<title>
 			{% block title %}
+				Advent'your Xmas
 			{% endblock %}
-		</title>		
+		</title>
 
 		{% block stylesheet %}
-		<link rel="stylesheet" href="/assets/css/navbar.css"> 
+		<link rel="stylesheet" href="/assets/css/navbar.css">
 		{% endblock %}
 		</head>
 
 		<body>
 
 			{% include "/include/_navbar.html.twig" %}
-
+			 {% include '/Security/Login.html.twig' %}
 			{% block content %}
-			 {% include 'Login.html.twig' %}
+
 			 {% endblock %}
 
-			{% block javascript %}{% endblock %}
+			{% block javascript %}
 			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
 			<script src="/assets/JS/script.js"></script>
+			<script src="/assets/JS/login.js"></script>
+			{% endblock %}
 		</body>
 	</html>

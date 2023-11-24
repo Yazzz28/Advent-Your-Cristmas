@@ -34,10 +34,11 @@ class SecurityController extends AbstractController
                 if ($user && password_verify($_POST['password'], $user['password'])) {
                     $_SESSION['islogin'] = true;
                     $_SESSION['email'] = $user['email'];
-                    return json_encode(['status_login' => 'success', 'message' => 'Connexion réussie']);
+                    return json_encode(['status_login' => 'success', 'message_success' => 'Connexion réussie']);
                     //header('Location:/');
                 } else {
-                    return json_encode (['status_login' => 'errors', 'message' => 'Email ou mot de passe incorrect']);
+                    return json_encode(['status_login' => 'errors', 'message_error'
+                    => 'Email ou mot de passe incorrect']);
                 }
             }
         }

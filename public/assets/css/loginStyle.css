@@ -1,11 +1,32 @@
 body {
     background-color: rgb(145, 12, 12);
-    height: 100vh;
+}
+
+.modal-center-1{
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+.container.div_login{
+    height:auto;
+    width:45%;
+}
+
+.div_login {
+    background-color: #6FD7A3;
+    border-radius: 40px 40px 40px 0;
+    padding: 2.5rem 4rem 2.5rem 4rem;
+    border: 2px solid;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .line {
     height: 3px;
-    background: linear-gradient(90deg, rgba(255,0,20,1) 0%, rgba(255,255,255,1) 3%, rgba(230,0,18,1) 7%, rgba(255,255,255,1) 11%, rgba(209,0,18,1) 16%, rgba(255,255,255,1) 21%, rgba(255,0,28,1) 26%, rgba(255,255,255,1) 29%, rgba(255,0,10,1) 33%, rgba(255,255,255,1) 37%, rgba(255,0,9,1) 40%, rgba(255,255,255,1) 42%, rgba(255,0,8,1) 46%, rgba(255,255,255,1) 49%, rgba(254,34,41,1) 51%, rgba(255,255,255,1) 55%, rgba(255,0,8,1) 58%, rgba(255,255,255,1) 61%, rgba(255,0,8,1) 63%, rgba(255,255,255,1) 65%, rgba(255,0,8,1) 67%, rgba(255,255,255,1) 69%, rgba(255,0,8,1) 72%, rgba(255,255,255,1) 74%, rgba(255,0,8,1) 75%, rgba(255,255,255,1) 76%, rgba(255,20,28,1) 77%, rgba(255,255,255,1) 78%, rgba(255,20,28,1) 100%);
+    background: linear-gradient(90deg, rgb(41, 7, 10) 0%, rgba(255,255,255,1) 3%, rgba(230,0,18,1) 7%, rgba(255,255,255,1) 11%, rgba(209,0,18,1) 16%, rgba(255,255,255,1) 21%, rgba(255,0,28,1) 26%, rgba(255,255,255,1) 29%, rgba(255,0,10,1) 33%, rgba(255,255,255,1) 37%, rgba(255,0,9,1) 40%, rgba(255,255,255,1) 42%, rgba(255,0,8,1) 46%, rgba(255,255,255,1) 49%, rgba(254,34,41,1) 51%, rgba(255,255,255,1) 55%, rgba(255,0,8,1) 58%, rgba(255,255,255,1) 61%, rgba(255,0,8,1) 63%, rgba(255,255,255,1) 65%, rgba(255,0,8,1) 67%, rgba(255,255,255,1) 69%, rgba(255,0,8,1) 72%, rgba(255,255,255,1) 74%, rgba(255,0,8,1) 75%, rgba(255,255,255,1) 76%, rgba(255,20,28,1) 77%, rgba(255,255,255,1) 78%, rgba(255,20,28,1) 100%);
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -17,14 +38,23 @@ body {
 }
 
 .uk-button {
-    width: 30%;
-    background-color: #6FD7A3;
+    width: 50%;
+    background-color: #FE646F;
     color: white;
-    border: 1px solid #C4E2FF;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.uk-button:hover {
+    background-color: #FD4755;
+    color: white;
+    transition: 250ms;
 }
 
 .uk-input {
     width: 100%;
+    font-size: 1.2rem;
 }
 
 .uk-inline {
@@ -34,6 +64,7 @@ body {
 
 .uk-input, .uk-select, .uk-textarea, .uk-button{
     border-radius: 10px 10px 10px 0;
+    border: 3px solid #C4E2FF;
 }
 
 .other-link>h4 {
@@ -42,12 +73,22 @@ body {
 
 h1 {
     color: white;
+    font-weight: 600;
 }
 
 a {
-    color: white;
+    color: #FD4755;
+    font-weight: 500;
+    font-size: 1.5rem ;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #FD4755;
 }
 
 h4 {
-    color: #6FD7A3;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
