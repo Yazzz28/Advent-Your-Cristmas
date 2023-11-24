@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 if (data.errorsForgot) {
-                    if (data.errorsForgot.email) {
+                    if (data.errorsForgot.emailF) {
                         const affichageErrorEmailForgot =
                             document.querySelector("#errorEmailForgot");
                         affichageErrorEmailForgot.setAttribute(
                             "placeholder",
-                            data.errorsForgot.email
+                            data.errorsForgot.emailF
                         );
                     }
                 }
