@@ -40,6 +40,7 @@
             <label for="date">Date du calendrier de l'avent</label>
             <input type="date" class="uk-input" name="date" id="date" min="2023-12-01" max="2023-12-24">
             {% if erreurs is defined %} {{erreurs.date}}{% endif %}
+            {% if erreurs is defined %} {{erreurs.emptyDate}}{% endif %}
         </div>
 
         <div class="input-form-dashboard">
