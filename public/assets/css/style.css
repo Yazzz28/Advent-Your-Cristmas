@@ -4,6 +4,7 @@
 @import './loginStyle.css';
 @import './modal.css';
 @import './home_style.css';
+@import url('page404.css');
 
 :root{
    --test-color: #6FD7A3; 
