@@ -20,7 +20,5 @@ return [
     'error404' => ['HomeController', 'pageError',],
     'user/dashboard' => ['DashboardUserController', 'dashboard'],
     'selectCadeauRandom' => ["DashboardUserController", "selectRandom"],
-    'forgot' => ['SecurityController', 'resetPassword',],
     'dashboard' => ['DashboardUserController', 'dashboard',],
-    'selectCadeauRandom' => ["DashboardUserController", "selectRandom",],
 ];
