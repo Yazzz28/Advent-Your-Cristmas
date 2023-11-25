@@ -22,6 +22,15 @@ class DashboardUserManager extends AbstractManager
         return $statement->fetch();
     }
 
+    public function selectRandomFilm(): array
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM film ORDER BY RAND() LIMIT 1");
+
+        $statement->execute();
+
+        return $statement->fetch();
+    }
+
     public function insertFormBlague(string $story): int
     {
         $statement = $this->pdo->prepare("INSERT INTO blague (story) VALUES (:story)");
@@ -74,6 +83,16 @@ class DashboardUserManager extends AbstractManager
         return $statement->fetch();
     }
 
+    public function selectOneByFilm(string $film): array|false
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM film WHERE movie_title=:title");
+        $statement->bindValue('title', $film, \PDO::PARAM_STR);
+        $statement->execute();
+
+        return $statement->fetch();
+    }
+
     public function insertContenu(int $idBlague, int $idCadeau, int $idRecette, int $idFilm, string $date, int $idUser)
     {
         $statement = $this->pdo->prepare("INSERT INTO contenu (day, user_id, blague_id, 
@@ -88,11 +107,12 @@ class DashboardUserManager extends AbstractManager
         return (int)$this->pdo->lastInsertId();
     }
 
-    public function verifDate(string $date)
+    public function verifDate(int $user_id, string $date)
     {
         // prepared request
-        $statement = $this->pdo->prepare("SELECT * FROM contenu WHERE day=:date");
+        $statement = $this->pdo->prepare("SELECT * FROM contenu WHERE day=:date AND user_id=:userId");
         $statement->bindValue('date', $date, \PDO::PARAM_STR);
+        $statement->bindValue('userId', $user_id, \PDO::PARAM_STR);
         $statement->execute();
 
         return $statement->fetch();

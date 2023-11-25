@@ -35,6 +35,7 @@ class SecurityController extends AbstractController
             if ($user && password_verify($_POST['password'], $user['password'])) {
                 $_SESSION['islogin'] = true;
                 $_SESSION['email'] = $user['email'];
+                $_SESSION['user_id'] = $user['id'];
                 return json_encode(['status_login' => 'success', 'message_success' => 'Connexion réussie']);
                 //header('Location:/');
             } else {
@@ -49,6 +50,7 @@ class SecurityController extends AbstractController
     {
         unset($_SESSION['islogin']);
         unset($_SESSION['email']);
+        unset($_SESSION['user_id']);
         header('Location:/');
     }
 
