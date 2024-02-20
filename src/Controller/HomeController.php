@@ -11,9 +11,12 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-
+        $contents = [];
         $homeManager = new HomeManager();
-        $contents = $homeManager->selectAllContenu("day");
+        if (isset($_SESSION["user_id"])) {
+            $contents = $homeManager->selectAllContenu($_SESSION["user_id"], "day");
+        }
+
         $newContents = [];
         foreach ($contents as $content) {
             for ($i = 0; $i <= 24; $i++) {

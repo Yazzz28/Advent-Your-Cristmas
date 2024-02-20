@@ -41,7 +41,7 @@ CREATE TABLE recette (
   title TEXT NOT NULL 
 );
 
-CREATE TABLE cadeau (
+CREATE TABLE idea (
   id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   idea VARCHAR(200) NOT NULL
 );
@@ -110,3 +110,24 @@ INSERT INTO `recette` (`title`) VALUES ("Jus de rêne façon savoyarde");
 INSERT INTO `recette` (`title`) VALUES ("Larmes d'enfants pas sage");
 INSERT INTO `recette` (`title`) VALUES ("Pain d'enfant perdu sucre canelle");
 INSERT INTO `recette` (`title`) VALUES ("Coquille Saint-Jacque de compostel");
+
+INSERT INTO `film` (`movie_title`) VALUES ("La famille Claus");
+INSERT INTO `film` (`movie_title`) VALUES ("The Noël diary");
+INSERT INTO `film` (`movie_title`) VALUES ("Les chroniques de Noël");
+INSERT INTO `film` (`movie_title`) VALUES ("Les 12 cadeaux de Noël");
+INSERT INTO `film` (`movie_title`) VALUES ("Le grinch");
+INSERT INTO `film` (`movie_title`) VALUES ("Le Noël de Mr Schroudge");
+INSERT INTO `film` (`movie_title`) VALUES ("Noël est servi");
+INSERT INTO `film` (`movie_title`) VALUES ("Il croit au pere noel");
+INSERT INTO `film` (`movie_title`) VALUES ("L’alchimie de Noël");
+INSERT INTO `film` (`movie_title`) VALUES ("Comme cendrillon, un vœu pour Noël");
+INSERT INTO `film` (`movie_title`) VALUES ("Un château pour Noël");
+INSERT INTO `film` (`movie_title`) VALUES ("The hollyday");
+INSERT INTO `film` (`movie_title`) VALUES ("Noël au grand cœur");
+INSERT INTO `film` (`movie_title`) VALUES ("Noël sous son aile");
+INSERT INTO `film` (`movie_title`) VALUES ("A christmas prince");
+INSERT INTO `film` (`movie_title`) VALUES ("Livre avant Noël");
+INSERT INTO `film` (`movie_title`) VALUES ("The holiday calendar");
+INSERT INTO `film` (`movie_title`) VALUES ("Ma belle famille Noël et moi");
+INSERT INTO `film` (`movie_title`) VALUES ("L’ambassadrice de Noël");
+INSERT INTO `film` (`movie_title`) VALUES ("Noël grâce à elle");
